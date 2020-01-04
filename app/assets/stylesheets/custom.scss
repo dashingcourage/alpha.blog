@@ -1,40 +1,56 @@
-
 @import "bootstrap";
 
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+//typo
+
+h2 {
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
 }
+
+//navigation
 
 #logo {
   float: left;
   font-size: 1.7em;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
   &:hover{
-    opacity: 0.7;
+    opacity: 0.6;
     text-decoration: none;
   }
 }
 
-.center {
-  text-align: center;
+.navbar {
+  margin-bottom: 15px;
 }
 
-.jumbotron {
-  padding: 0 auto;
+//jumbotron
+
+.jumbotron-extend {
+  position: relative;
   background-image: asset-url('images.png');
   background-size: cover;
-  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   h1 {
     color: #fff;
-    text-align: center;
-    margin-bottom: 30px;
     letter-spacing: -1px;
     font-weight: bold;
   }
+}
+
+.jumbotron-container {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+
+//form
+.form-height {
+  margin-top: 20px;
 }
 
 footer {
@@ -58,15 +74,3 @@ footer {
   }
 }
 
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
-
-input {
-  height: auto !important;
-}
