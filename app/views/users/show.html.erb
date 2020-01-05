@@ -1,0 +1,9 @@
+<h2 align="center"><%= @user.username %>'s Page</h2>
+<p align="center"><%= gravatar_for @user %></p>
+
+<div class="row">
+  <div class="col-8 offset-sm-2">
+    <h5 align="center">Articles</h5>
+    <%= render 'articles/article', obj: @user.articles %>
+  </div>
+</div>
