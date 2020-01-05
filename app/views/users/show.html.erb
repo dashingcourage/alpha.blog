@@ -4,6 +4,9 @@
 <div class="row">
   <div class="col-8 offset-sm-2">
     <h5 align="center">Articles</h5>
-    <%= render 'articles/article', obj: @user.articles %>
+      <%= paginate @user_articles %>
+    <%= render 'articles/article', obj: @user_articles %>
   </div>
 </div>
+
+ <%= paginate @user_articles %>

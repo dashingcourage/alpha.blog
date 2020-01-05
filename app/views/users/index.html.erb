@@ -1,5 +1,9 @@
 <h2 align="center">All Alpha Bloggers</h2>
 
+<div align="center">
+  <%= paginate @users%>
+</div>
+
 <% @users.each do |user| %>
   <div class="row">
     <div class="card col-4 offset-sm-4 mb-2 text-center">
@@ -15,3 +19,7 @@
     </div>
   </div>
 <% end %>
+
+<div align="center">
+  <%= paginate @users%>
+</div>

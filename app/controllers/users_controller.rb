@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   def index
-    @users = User.all
+    @users = User.page params[:page]
   end
   
   def new
@@ -33,6 +33,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @user_articles = @user.articles.page(params[:page])
   end
 
   private
